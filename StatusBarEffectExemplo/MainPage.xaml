@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:StatusBarEffectExemplo"
+             xmlns:effect="clr-namespace:StatusBarEffectExemplo.Effects" 
+             x:Class="StatusBarEffectExemplo.MainPage" effect:BarEffect.Color="{Binding CorBar}" >
+    
+   <ContentPage.Effects>
+        <effect:StatusBarEffect 
+            BackgroundColor="Blue"/>
+    </ContentPage.Effects>
+    
+    
+    
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label Text="Mudando a statusbar!!"
+               HorizontalOptions="Center" 
+               VerticalOptions="CenterAndExpand" />
+        <Button HorizontalOptions="Center" 
+               VerticalOptions="CenterAndExpand" Text="Mudar Cor da Barra" Command="{Binding MudarCorCommand}" ></Button>
+    </StackLayout>
+</ContentPage>
